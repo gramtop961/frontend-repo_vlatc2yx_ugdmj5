@@ -1,28 +1,42 @@
-import { useState } from 'react'
+import DailyDashboard from './components/DailyDashboard';
+import PhaseNavigator from './components/PhaseNavigator';
+import MusicMoodZone from './components/MusicMoodZone';
+import HabitAnalytics from './components/HabitAnalytics';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50">
+      {/* Header */}
+      <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur">
+        <div className="mx-auto max-w-6xl px-4 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex flex-col">
+              <h1 className="text-lg font-semibold text-slate-800">Gaurav Version 2.0 — The Comeback App</h1>
+              <p className="text-xs text-slate-600">Tu ruk gaya hai Gaurav, khatam nahi hua. Har din ek naya start hai.</p>
+            </div>
+            <div className="hidden text-xs text-slate-500 md:block">Warm • Caring • Dost jaisa</div>
+          </div>
         </div>
-      </div>
+      </header>
+
+      {/* Main content */}
+      <main className="mx-auto max-w-6xl space-y-10 px-4 py-8">
+        <DailyDashboard />
+
+        <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <PhaseNavigator />
+          <MusicMoodZone />
+        </section>
+
+        <HabitAnalytics />
+
+        {/* Footer note */}
+        <footer className="pt-6 text-center text-xs text-slate-500">
+          Gentle reminder: Small steps bhi progress hain. Aaj ka din apne liye jeet lo.
+        </footer>
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

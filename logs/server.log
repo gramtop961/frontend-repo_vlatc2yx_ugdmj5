@@ -1,0 +1,21 @@
+
+> vibe-generated-app@1.0.0 dev
+> vite
+
+
+  VITE v5.4.20  ready in 445 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.20.51.174:3000/
+2:52:04 PM [vite] warning: The character ">" is not valid inside a JSX element
+78 |          <div className="mt-5 flex items-center gap-3 rounded-lg border border-dashed border-slate-300 p-4">
+79 |            <Target className="h-5 w-5 text-orange-500" />
+80 |            <p className="text-sm text-slate-600">Tip: 21 din ke liye chhote, clear targets banao. Consistency > intensity.</p>
+   |                                                                                                               ^
+81 |          </div>
+82 |        </div>
+
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/PhaseNavigator.jsx
+2:52:05 PM [vite] ✨ new dependencies optimized: lucide-react
+2:52:05 PM [vite] ✨ optimized dependencies changed. reloading
